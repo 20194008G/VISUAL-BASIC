@@ -4,8 +4,79 @@ LstDatos.Items.Add(i) //Pa agregar pe
 
 //For
 
-    For i As Byte = 1 To 20
+    For i As Byte = 0 To x.Length - 1
         ListView1.Items.Add(i)
     Next
     
+//EJEMPLO DE FOR EN UN LISTVIEW
+        Dim nombres(2), paterno(2), materno(2) As String
+        Dim edad(2) As Byte
+        nombres(0) = "NAME0"
+        paterno(0) = "paterno0"
+        materno(0) = "materno0"
+        nombres(1) = "NAME1"
+        paterno(1) = "paterno1"
+        materno(1) = "materno1"
+        nombres(2) = "NAME2"
+        paterno(2) = "paterno2"
+        materno(2) = "materno2"
+        edad(0) = 12
+        edad(1) = 23
+        edad(2) = 36
+        ListView1.Items.Clear()
+        'Cargando Datos
+        For i As Byte = 0 To nombres.Length - 1
+            ListView1.Items.Add(i + 1)
+            ListView1.Items(i).SubItems.Add(nombres(i))
+            ListView1.Items(i).SubItems.Add(paterno(i))
+            ListView1.Items(i).SubItems.Add(materno(i))
+            If i Mod 2 = 0 Then
+                ListView1.Items(i).BackColor = Color.Aqua      //AGREGAR COLOR
+            End If
+        Next
+    //IMPORTANTE EN UN LISTVIEW 
+    FullRowSelect(True)
+    //If RadioButton1.Checked = True Then
+            'POR NOMBRES
+            ListView1.Items.Clear()
+            'Cargando Datos
+            Dim cont As Byte
+            cont = 0
+            For i As Byte = 0 To nombres.Length - 1
+                If nombres(i).ToUpper.StartsWith(TextBox1.Text.ToUpper) Then //TOUPPER SIRVE PARA CONVERTIR EN MAYUSCULAS
+                    ListView1.Items.Add(cont + 1)
+                    ListView1.Items(cont).SubItems.Add(nombres(i))
+                    ListView1.Items(cont).SubItems.Add(paterno(i))
+                    ListView1.Items(cont).SubItems.Add(materno(i))
+                    If cont Mod 2 = 0 Then 
+                        ListView1.Items(cont).BackColor = Color.Aqua
+                    End If
+                    cont += 1
+                End If
+
+            Next
+        Else
+
+        End If
     
+    //NUMEROS ALEATORIOS
+    Dim num(10) As Byte
+        Dim n As New Random
+        For i As Byte = 0 To 10
+            num(i) = n.Next(1, 10)
+        Next
+       
+   //PARA MENSAJE DE MSGBOX
+   MsgBox("Hola el cuatro es: " & edad(i) & "y esa edad es " & i)
+   //funciones
+       Function MyFunc() As Integer
+        Return 0
+    End Function
+    
+    //PROCEDIMIENTOS
+    Sub MySub()
+
+    End Sub
+    
+    //MATRICES
+    //ENVES DE LENGHT USAR GETUPPERBOUND(0) en el primer for en el segundo for usar 1
