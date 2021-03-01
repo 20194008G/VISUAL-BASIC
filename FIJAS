@@ -1,0 +1,11 @@
+//Para las listas:
+LstDatos.Items.Clear() //Pa borrar pe
+LstDatos.Items.Add(i) //Pa agregar pe
+
+//For
+
+    For i As Byte = 1 To 20
+        ListView1.Items.Add(i)
+    Next
+    
+    
