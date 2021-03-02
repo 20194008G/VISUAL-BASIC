@@ -36,6 +36,8 @@ LstDatos.Items.Add(i) //Pa agregar pe
         Next
     //IMPORTANTE EN UN LISTVIEW 
     FullRowSelect(True)
+    //IMPORTANTE DE UN FORMULARIO PARA QUITAR EL - [] X, Y QUE SOLO QUEDE EL X 
+    FormBorderStyle
     //If RadioButton1.Checked = True Then
             'POR NOMBRES
             ListView1.Items.Clear()
@@ -80,3 +82,23 @@ LstDatos.Items.Add(i) //Pa agregar pe
     
     //MATRICES
     //ENVES DE LENGHT USAR GETUPPERBOUND(0) en el primer for en el segundo for usar 1
+    
+    //PARA POO
+    //PROPERTY tab tab para crear
+    //Para los constructores crear 
+    Sub New(argCodigo As Byte, argNombre As String)
+        codigo=argCodigo
+        nombre=argNombre
+    End Sub    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //AHORA SI SE VIENE LO CHIDO BD CON VISUAL
+    Para ello colocar la libreria el inicio de la clase=> Imports System.Data.SqlClient
+    
+    
